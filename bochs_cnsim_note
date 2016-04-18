@@ -1,0 +1,15 @@
+1.About Pram prolog
+0x40000340-0x4000036C,0x400004BC IO_RSTRT_XXX cannot sync with cnsim 
+2.About APIC
+0xFEE00300 don't occur in cnsim result mem, it occur in tracer dump 0x40000D38, but data isnot sync with cnism program seg
+0xFEE000F0 don't update in result part too.
+3.About segment descripotors in protect mode/comp mode/long mode
+GTD index 0 cannot be used. But cnsim still update seg descriptors, if seg selectors index filed is 0. This point result in cnsim mismatch with bochsmismatch address may be 0x40000808-0x40000834
+4.About Core prolog
+0x40000860-0x4000087C is like FSdesc_ext,GSdesc_ext, don't know the meaning
+Intel IA-32 don't have GDTdesc/IDTdesc, so don't care mismatch 0x40000844 and 0x4000084C.
+5.About tracer type2 reload
+bochs don't dump EFLAGS, RDI ,RSI ,RBP ,RSP ,perf crl0/crl1 and tsc in RDMSR/CPUID/RDTSC/RDPMC. So 0x40020028,0x40020050-0x40020084 may mismatch
+6.About last excption vector and interrupt vector
+cannot handle now
+ 

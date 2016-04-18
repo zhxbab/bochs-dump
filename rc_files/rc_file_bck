@@ -1,0 +1,6 @@
+show dbg_all
+trace on 
+trace-mem on
+pb 0x8024
+pb 0x7C00
+c

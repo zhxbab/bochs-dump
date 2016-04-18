@@ -1,0 +1,1 @@
+./configure  --enable-x86-64 --enable-vmx --enable-avx --enable-configurable-msrs --enable-long-phy-address --enable-debugger --enable-disasm --enable-debugger-gui --enable-readline --enable-docbook --with-sdl --enable-instrumentation="instrument/mystubs"

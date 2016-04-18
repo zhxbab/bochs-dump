@@ -1,0 +1,1 @@
+./configure  --enable-x86-64 --enable-vmx --enable-avx --enable-long-phy-address --enable-debugger --enable-disasm --enable-debugger-gui --enable-readline --enable-docbook --with-sdl
